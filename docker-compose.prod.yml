@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  web:
+    image: 'ghcr.io/mpeciakk/cicd-test:main'
+    ports:
+      - "3000:3000"
+    labels:
+      - io.portainer.accesscontrol.public
