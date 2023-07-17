@@ -58,12 +58,11 @@ jobs:
       - name: Deploy to machine
         uses: mpeciakk/docker-deployment-action@master
         with:
-          remote_docker_host: ${{ secrets.DEPLOY_TARGET }}
+          remote_host: ${{ secrets.REMOTE_HOST }}
           ssh_key: ${{ secrets.SSH_KEY }}
           deploy_path: ${{ secrets.DEPLOY_PATH }}
           stack_file_name: docker-compose.prod.yml
           pull_images: true
-          args: up -d
 
   notify:
     name: notify
