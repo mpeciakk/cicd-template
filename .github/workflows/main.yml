@@ -56,7 +56,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Deploy to machine
-        uses: mpeciakk/docker-deployment-action@master
+        uses: mpeciakk/docker-deployment-action@main
         with:
           remote_host: ${{ secrets.REMOTE_HOST }}
           ssh_key: ${{ secrets.SSH_KEY }}
